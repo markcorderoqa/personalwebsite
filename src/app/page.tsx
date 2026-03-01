@@ -190,9 +190,6 @@ export default function Home() {
           <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-tr from-brand-500 to-sky-400 text-sm font-semibold text-white shadow-soft">
             QA
           </div>
-          <span className="text-sm font-medium text-slate-300">
-            Mark Cordero · QA
-          </span>
         </div>
         <nav className="hidden gap-6 text-xs font-medium text-slate-300 md:flex">
           <a href="#about" className="hover:text-brand-300">
