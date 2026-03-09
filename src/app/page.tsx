@@ -116,40 +116,49 @@ const experiences = [
 
 const projects = [
   {
-    name: "Payment Platform Web App",
-    role: "Lead QA Engineer",
+    name: "Easy Employer",
+    role: "Agile Test Engineer",
+    url: "https://easyemployer.com.au/",
     description:
-      "Led testing for a responsive payment platform handling high transaction volumes and multiple payment providers.",
+      "Cloud-based workforce management platform for staff, rostering, time & attendance, and payroll across aged care, retail, hospitality, and more.",
     focus: [
-      "End-to-end testing of payment flows, refunds, chargebacks, and error handling.",
-      "API testing for integrations with external payment gateways.",
-      "Regression suites covering cross-browser and responsive layouts."
+      "Staff Management: user management, onboarding flows, and role-based permissions.",
+      "Rostering: shift creation, assignments, conflict detection, and roster publishing.",
+      "Time & Attendance: clock-in/out, break tracking, and timesheet capture.",
+      "Timesheet Management: submission workflows, approval flows, and edits.",
+      "Award Interpretation: award rate application, wage forecasting, and compliance checks.",
+      "Payroll: tested and validated payroll calculation scenarios against Fair Work requirements.",
+      "Regression testing between releases to ensure stability and consistency."
     ],
-    stack: ["Web", "REST APIs", "Postman", "Selenium", "Jira"]
+    stack: ["Web", "Cypress", "Playwright", "Jira", "REST APIs"]
   },
   {
-    name: "Customer Self-Service Portal",
-    role: "QA Engineer",
+    name: "Freight Cyber",
+    role: "Automation Test Analyst",
+    url: "https://freightcyber.com/",
     description:
-      "Tested a portal that allowed customers to manage their accounts, requests, and support tickets.",
+      "Freight and logistics management platform with FCX (CRM, asset management, operations), FCX Drive (driver app), and ITAP for transport and supply chain.",
     focus: [
-      "User journey validation from sign-up to complex account operations.",
-      "Data validation across UI, API, and database layers.",
-      "Accessibility checks and responsive design verification."
+      "Led test automation using Playwright for UI and API regression suites.",
+      "Built CI/CD pipelines with GitHub Actions for daily automated test runs.",
+      "Tested FCX mobile application covering driver workflows and compliance features.",
+      "Mentored QA team members on Playwright and test automation best practices."
     ],
-    stack: ["Web", "Cypress", "Azure DevOps", "TestRail"]
+    stack: ["Web", "Mobile", "Playwright", "GitHub Actions", "Jira"]
   },
   {
-    name: "Mobile-first Booking Experience",
-    role: "QA Analyst",
+    name: "Habitap",
+    role: "Quality Assurance Analyst",
+    url: "https://myhabitap.com/",
     description:
-      "Validated a mobile-first booking flow with complex pricing, discounts, and availability rules.",
+      "Smart living management platform combining smart controls, community management, and lifestyle offerings. Includes Habitap ONE, a cloud-driven access management solution.",
     focus: [
-      "Scenario-based and exploratory testing around edge cases and date logic.",
-      "Cross-device testing on real devices and emulators.",
-      "Collaborated closely with designers to ensure UI consistency."
+      "Tested mobile app integration with IoT devices for smart controls and access management.",
+      "Validated Habitap ONE features: cloud-driven access, NFC/Bluetooth unlock, and gantry integration.",
+      "Executed manual and automated regression testing for web and mobile.",
+      "Created and maintained automated test scripts for web and mobile using TestProject."
     ],
-    stack: ["Mobile Web", "Responsive Testing", "BrowserStack", "Confluence"]
+    stack: ["Web", "Mobile", "IoT", "TestProject", "Jira"]
   }
 ];
 
@@ -262,6 +271,13 @@ export default function Home() {
               <span className="h-2 w-2 rounded-full bg-emerald-400" />
               <span>Open to QA / Test Engineer roles</span>
             </div>
+            <a
+              href="/resume.pdf"
+              download="Mark-Cordero-Resume.pdf"
+              className="inline-flex items-center justify-center rounded-full border border-brand-400/60 px-4 py-1.5 text-xs font-medium text-brand-300 transition hover:border-brand-400 hover:bg-brand-500/10"
+            >
+              Download resume
+            </a>
             <a
               href="#contact"
               className="inline-flex items-center justify-center rounded-full bg-brand-500 px-4 py-1.5 text-xs font-medium text-white shadow-soft transition hover:bg-brand-400"
@@ -419,7 +435,18 @@ export default function Home() {
           {projects.map((project) => (
             <article key={project.name} className="card flex flex-col p-5">
               <h3 className="mb-1 text-sm font-semibold text-slate-50">
-                {project.name}
+                {project.url ? (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-brand-300 hover:text-brand-200 transition"
+                  >
+                    {project.name}
+                  </a>
+                ) : (
+                  project.name
+                )}
               </h3>
               <p className="mb-2 text-[11px] font-medium text-brand-200">
                 {project.role}
