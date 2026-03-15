@@ -36,6 +36,13 @@ const certifications = [
       "Covers fundamental testing principles, test design techniques, test management, and tool support."
   },
   {
+    name: "ISTQB Certified Tester – Agile Tester (CT-Agile)",
+    issuer: "ISTQB / ASTQB",
+    year: "2025",
+    notes:
+      "Testing in Agile contexts: Agile principles, test approaches, and collaboration within Agile teams."
+  },
+  {
     name: "LambdaTest Playwright 101",
     issuer: "TestMu AI formerly LambdaTest",
     year: "2024",

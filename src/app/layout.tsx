@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,6 +30,7 @@ export default function RootLayout({
           <div className="absolute inset-y-0 right-[-20%] w-[320px] bg-[radial-gradient(circle_at_right,_rgba(251,113,133,0.14),_transparent_60%)]" />
         </div>
         {children}
+        <Analytics />
       </body>
     </html>
   );
