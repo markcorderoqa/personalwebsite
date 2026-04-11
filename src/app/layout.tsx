@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
-const inter = Inter({
+const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap"
 });
@@ -22,12 +22,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} relative min-h-screen overflow-x-hidden bg-slate-950`}
+        className={`${sans.className} relative min-h-screen overflow-x-hidden bg-slate-950 antialiased`}
       >
         <div className="pointer-events-none fixed inset-0 -z-10">
-          <div className="absolute inset-x-0 top-[-10%] h-[320px] bg-[radial-gradient(circle_at_top,_rgba(94,123,255,0.35),_transparent_60%)]" />
-          <div className="absolute inset-y-0 left-[-20%] w-[320px] bg-[radial-gradient(circle_at_left,_rgba(56,189,248,0.16),_transparent_60%)]" />
-          <div className="absolute inset-y-0 right-[-20%] w-[320px] bg-[radial-gradient(circle_at_right,_rgba(251,113,133,0.14),_transparent_60%)]" />
+          <div className="absolute inset-x-0 top-[-8%] h-[420px] bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(94,123,255,0.28),transparent_55%)]" />
+          <div className="absolute inset-y-0 left-[-15%] w-[380px] bg-[radial-gradient(circle_at_left,rgba(56,189,248,0.12),transparent_55%)]" />
+          <div className="absolute inset-y-0 right-[-12%] w-[360px] bg-[radial-gradient(circle_at_right,rgba(244,114,182,0.1),transparent_55%)]" />
+          <div className="absolute bottom-0 left-1/2 h-[280px] w-[min(100%,720px)] -translate-x-1/2 bg-[radial-gradient(ellipse_at_bottom,rgba(54,86,245,0.12),transparent_70%)]" />
         </div>
         {children}
         <Analytics />
@@ -35,4 +36,3 @@ export default function RootLayout({
     </html>
   );
 }
-
