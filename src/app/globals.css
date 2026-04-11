@@ -9,12 +9,12 @@
   }
 
   body {
-    @apply bg-slate-950 text-slate-100 antialiased;
+    @apply bg-[#e8e4dc] text-stone-900 antialiased;
   }
 }
 
 ::selection {
-  @apply bg-brand-400/60 text-slate-950;
+  @apply bg-brand-400/40 text-stone-900;
 }
 
 @layer components {
@@ -23,11 +23,11 @@
   }
 
   .page-shell-header {
-    @apply sticky top-4 z-40 mb-12 flex items-center justify-between gap-3 rounded-2xl border border-slate-800/80 bg-slate-950/80 px-3 py-2.5 shadow-[0_8px_40px_rgba(2,6,23,0.65)] backdrop-blur-xl md:px-5 md:py-3;
+    @apply sticky top-4 z-40 mb-12 flex items-center justify-between gap-3 rounded-2xl border border-stone-300/90 bg-[#f3f0ea]/90 px-3 py-2.5 shadow-[0_8px_40px_rgba(60,55,48,0.08)] backdrop-blur-xl md:px-5 md:py-3;
   }
 
   .page-shell-header nav a {
-    @apply text-xs font-medium text-slate-400 transition-colors hover:text-brand-300;
+    @apply text-xs font-medium text-stone-600 transition-colors hover:text-brand-800;
   }
 
   .section {
@@ -35,37 +35,37 @@
   }
 
   .section-heading {
-    @apply mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-brand-300/90;
+    @apply mb-3 text-[11px] font-semibold uppercase tracking-[0.28em] text-brand-800/90;
   }
 
   .section-title {
-    @apply mb-6 max-w-2xl text-2xl font-semibold tracking-tight text-slate-50 md:text-3xl;
+    @apply mb-6 max-w-2xl text-2xl font-semibold tracking-tight text-stone-900 md:text-3xl;
   }
 
   .card {
-    @apply rounded-2xl border border-slate-800/80 bg-slate-900/60 shadow-[0_20px_50px_rgba(2,6,23,0.45)] backdrop-blur-md;
+    @apply rounded-2xl border border-stone-300/90 bg-[#faf8f4]/90 shadow-[0_20px_50px_rgba(60,55,48,0.07)] backdrop-blur-md;
   }
 
   .badge {
-    @apply inline-flex items-center rounded-full border border-slate-700/80 bg-slate-900/90 px-3 py-1 text-[11px] font-medium text-slate-200;
+    @apply inline-flex items-center rounded-full border border-stone-300/90 bg-stone-100/90 px-3 py-1 text-[11px] font-medium text-stone-800;
   }
 
   .hero-grid-bg {
     background-image: linear-gradient(
-        rgba(148, 163, 184, 0.06) 1px,
+        rgba(87, 83, 78, 0.07) 1px,
         transparent 1px
       ),
-      linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px);
+      linear-gradient(90deg, rgba(87, 83, 78, 0.07) 1px, transparent 1px);
     background-size: 48px 48px;
     mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, black, transparent);
   }
 
   .hero-profile {
-    @apply relative flex flex-col items-center overflow-hidden rounded-3xl border border-slate-800/90 bg-gradient-to-b from-slate-900/90 to-slate-950/90 p-1 text-center shadow-[0_24px_80px_rgba(15,23,42,0.55)];
+    @apply relative flex flex-col items-center overflow-hidden rounded-3xl border border-stone-300/90 bg-gradient-to-b from-[#faf8f4] to-[#ebe8e0] p-1 text-center shadow-[0_24px_60px_rgba(60,55,48,0.1)];
   }
 
   .hero-profile-image {
-    @apply size-[200px] shrink-0 rounded-full object-cover;
+    @apply mt-3 size-[200px] shrink-0 rounded-full object-cover;
   }
 
   .hero-profile-text {
@@ -73,27 +73,27 @@
   }
 
   .hero-profile-tag {
-    @apply text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-300;
+    @apply text-[10px] font-semibold uppercase tracking-[0.22em] text-brand-800;
   }
 
   .hero-profile-title {
-    @apply text-base font-semibold text-slate-50;
+    @apply text-base font-semibold text-stone-900;
   }
 
   .hero-profile-subtitle {
-    @apply text-xs leading-relaxed text-slate-400;
+    @apply text-xs leading-relaxed text-stone-600;
   }
 
   .stat-pill {
-    @apply flex min-w-[120px] flex-1 flex-col rounded-2xl border border-slate-800/80 bg-slate-900/50 px-4 py-3;
+    @apply flex min-w-[120px] flex-1 flex-col rounded-2xl border border-stone-300/90 bg-[#faf8f4]/90 px-4 py-3;
   }
 
   .stat-pill-value {
-    @apply text-xl font-semibold tracking-tight text-slate-50 md:text-2xl;
+    @apply text-xl font-semibold tracking-tight text-stone-900 md:text-2xl;
   }
 
   .stat-pill-label {
-    @apply mt-1 text-[10px] font-medium uppercase tracking-[0.14em] text-slate-500;
+    @apply mt-1 text-[10px] font-medium uppercase tracking-[0.14em] text-stone-500;
   }
 
   .photo-grid {
@@ -101,7 +101,7 @@
   }
 
   .photo-card {
-    @apply relative overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-950 shadow-[0_16px_40px_rgba(2,6,23,0.5)] transition-transform duration-300 hover:-translate-y-0.5;
+    @apply relative overflow-hidden rounded-2xl border border-stone-300/90 bg-stone-200 shadow-[0_16px_40px_rgba(60,55,48,0.1)] transition-transform duration-300 hover:-translate-y-0.5;
   }
 
   .photo-card img {
@@ -109,23 +109,23 @@
   }
 
   .photo-card-caption {
-    @apply pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-slate-950/95 via-slate-950/20 to-transparent p-3;
+    @apply pointer-events-none absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-stone-950 via-stone-900/30 to-transparent p-3;
   }
 
   .photo-card-caption-title {
-    @apply text-xs font-semibold text-slate-50;
+    @apply text-xs font-semibold text-stone-50;
   }
 
   .photo-card-caption-subtitle {
-    @apply mt-0.5 text-[10px] text-slate-300;
+    @apply mt-0.5 text-[10px] text-stone-300;
   }
 
   .project-card-accent {
-    @apply h-1.5 w-full rounded-t-2xl bg-gradient-to-r from-brand-500 via-sky-400 to-fuchsia-400/80;
+    @apply h-1.5 w-full rounded-t-2xl bg-gradient-to-r from-stone-500 via-stone-400 to-brand-600;
   }
 
   .timeline-node {
-    @apply hidden h-2.5 w-2.5 shrink-0 rounded-full border-2 border-brand-400 bg-slate-950 shadow-[0_0_0_4px_rgba(15,23,42,0.9)] md:block;
+    @apply hidden h-2.5 w-2.5 shrink-0 rounded-full border-2 border-brand-600 bg-[#e8e4dc] shadow-[0_0_0_4px_rgba(232,228,220,0.95)] md:block;
   }
 
   .mobile-nav details > summary {
