@@ -9,22 +9,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Figma "Frozen mist": neutral cool grays + cinnamon / burnt orange accent
+        // Accent aligned with cool layout glows (indigo / violet-blue)
         brand: {
-          50: "#faf7f5",
-          100: "#f3ebe6",
-          200: "#e8d5c9",
-          300: "#d7b49e",
-          400: "#c58968",
-          500: "#b86f45",
-          600: "#9d5b3a",
-          700: "#824b32",
-          800: "#6b402e",
-          900: "#5a3628"
+          50: "#eef2ff",
+          100: "#e0e7ff",
+          200: "#c7d2fe",
+          300: "#a5b4fc",
+          400: "#818cf8",
+          500: "#6366f1",
+          600: "#4f46e5",
+          700: "#4338ca",
+          800: "#3730a3",
+          900: "#312e81"
         }
       },
       boxShadow: {
-        soft: "0 18px 45px rgba(60, 55, 48, 0.08)"
+        soft: "0 18px 45px rgba(15, 23, 42, 0.35)"
       }
     }
   },
