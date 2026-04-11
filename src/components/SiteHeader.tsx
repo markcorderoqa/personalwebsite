@@ -88,7 +88,7 @@ export function SiteHeader({ links }: SiteHeaderProps) {
               <path d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </summary>
-          <div className="absolute left-1/2 top-full z-50 mt-2 w-[min(100vw-2rem,16rem)] -translate-x-1/2 rounded-2xl border border-slate-800/90 bg-slate-950 p-2 shadow-[0_24px_60px_rgba(2,6,23,0.75)] backdrop-blur-md sm:left-auto sm:right-0 sm:translate-x-0">
+          <div className="absolute right-0 top-full z-50 mt-1.5 w-[min(100vw-2rem,9.5rem)] rounded-xl border border-slate-800/90 bg-slate-950 p-1.5 shadow-[0_24px_60px_rgba(2,6,23,0.75)] backdrop-blur-md">
             <nav className="flex flex-col gap-0.5">
               {links.map((link) => (
                 <a
