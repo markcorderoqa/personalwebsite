@@ -29,7 +29,7 @@
   }
 
   .page-shell-header {
-    @apply relative mb-12 flex items-center justify-between gap-3 rounded-2xl border border-slate-800/80 bg-slate-950/80 px-3 py-2.5 shadow-[0_8px_40px_rgba(2,6,23,0.65)] backdrop-blur-xl transition-[border-color,box-shadow,background-color] duration-300 ease-out md:px-5 md:py-3;
+    @apply relative z-40 mb-12 flex items-center justify-between gap-3 rounded-2xl border border-slate-800/80 bg-slate-950/80 px-3 py-2.5 shadow-[0_8px_40px_rgba(2,6,23,0.65)] backdrop-blur-xl transition-[border-color,box-shadow,background-color] duration-300 ease-out md:px-5 md:py-3;
   }
 
   .page-shell-header--scrolled {
@@ -135,11 +135,11 @@
     @apply hidden h-2.5 w-2.5 shrink-0 rounded-full border-2 border-brand-400 bg-slate-950 shadow-[0_0_0_4px_rgba(15,23,42,0.9)] md:block;
   }
 
-  .mobile-nav details > summary {
+  details.mobile-nav > summary {
     list-style: none;
   }
 
-  .mobile-nav details > summary::-webkit-details-marker {
+  details.mobile-nav > summary::-webkit-details-marker {
     display: none;
   }
 

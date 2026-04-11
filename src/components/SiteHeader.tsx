@@ -10,6 +10,7 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ links }: SiteHeaderProps) {
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -65,7 +66,11 @@ export function SiteHeader({ links }: SiteHeaderProps) {
           Let&apos;s talk
         </a>
 
-        <details className="mobile-nav relative lg:hidden">
+        <details
+          className="mobile-nav relative lg:hidden"
+          open={mobileMenuOpen}
+          onToggle={(e) => setMobileMenuOpen(e.currentTarget.open)}
+        >
           <summary
             aria-label="Open navigation menu"
             className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-xl border border-slate-800 bg-slate-900/80 text-slate-200 transition hover:border-slate-700 hover:bg-slate-800/80"
@@ -83,12 +88,13 @@ export function SiteHeader({ links }: SiteHeaderProps) {
               <path d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </summary>
-          <div className="absolute left-1/2 top-full z-50 mt-2 w-[min(100vw-2rem,16rem)] -translate-x-1/2 rounded-2xl border border-slate-800/90 bg-slate-950/95 p-2 shadow-[0_24px_60px_rgba(2,6,23,0.75)] backdrop-blur-xl sm:left-auto sm:right-0 sm:translate-x-0">
+          <div className="absolute left-1/2 top-full z-50 mt-2 w-[min(100vw-2rem,16rem)] -translate-x-1/2 rounded-2xl border border-slate-800/90 bg-slate-950 p-2 shadow-[0_24px_60px_rgba(2,6,23,0.75)] backdrop-blur-md sm:left-auto sm:right-0 sm:translate-x-0">
             <nav className="flex flex-col gap-0.5">
               {links.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
                   className="rounded-xl px-3 py-2.5 text-sm text-slate-300 transition hover:bg-slate-800/80 hover:text-brand-300"
                 >
                   {link.label}
