@@ -3,26 +3,28 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.css"
   ],
   theme: {
     extend: {
       colors: {
+        // Accent aligned with cool layout glows (indigo / violet-blue)
         brand: {
-          50: "#f4f7ff",
-          100: "#e4ebff",
-          200: "#c2d0ff",
-          300: "#90a6ff",
-          400: "#5e7bff",
-          500: "#3656f5",
-          600: "#2540d0",
-          700: "#1e36a8",
-          800: "#1c3186",
-          900: "#1b2b6b"
+          50: "#eef2ff",
+          100: "#e0e7ff",
+          200: "#c7d2fe",
+          300: "#a5b4fc",
+          400: "#818cf8",
+          500: "#6366f1",
+          600: "#4f46e5",
+          700: "#4338ca",
+          800: "#3730a3",
+          900: "#312e81"
         }
       },
       boxShadow: {
-        soft: "0 18px 45px rgba(15, 23, 42, 0.12)"
+        soft: "0 18px 45px rgba(15, 23, 42, 0.35)"
       }
     }
   },
